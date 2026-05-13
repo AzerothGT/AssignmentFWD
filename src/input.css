@@ -18,7 +18,7 @@
     @apply transition-all duration-300 hover:text-primary;
   }
   .btn {
-    @apply cursor-pointer min-w-21 w-fit h-10 rounded-full bg-primary px-4 text-sm font-bold transition-all duration-300 hover:bg-[oklch(45% 0.24 262)];
+    @apply font-grotesk cursor-pointer min-w-21 w-fit h-10 rounded-full bg-primary px-4 text-sm font-bold transition-all duration-300 hover:bg-text-secondary;
   }
   .sub-title {
     @apply text-2xl font-semibold

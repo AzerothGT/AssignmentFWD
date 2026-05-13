@@ -13,6 +13,7 @@
   --color-secondary: #e5e8eb;
   --color-text-secondary: #0d121c;
 }
+
 a {
   text-decoration: none;
 }
@@ -67,6 +68,12 @@ a {
   font-weight: 700;
 }
 
+.btn a {
+
+  color: var(--color-text-primary);
+
+}
+
 /* Main */
 .main {
   padding: 1rem 1.25rem;
@@ -106,6 +113,7 @@ a {
 .hero-background p {
   font-weight: 400;
 }
+
 .hero-title,
 .hero-desc {
   color: var(--color-text-primary);
@@ -219,6 +227,7 @@ a {
 .footer-link {
   justify-self: center;
 }
+
 .footer a {
   color: var(--color-text-secondary);
   color: inherit;
