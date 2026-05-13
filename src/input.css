@@ -5,5 +5,35 @@
   --color-background: #121421;
   --color-primary: #1238ed;
   --color-text-primary: #E5E8EB;
+  --color-text-secondary: #919CC9;
   --font-grotesk: 'Space Grotesk', sans-serif;
+}
+
+@layer components{
+  .sub-title {
+    @apply text-2xl font-semibold
+  }
+  .cards {
+    @apply grid grid-cols-[repeat(5,176px)] gap-3 px-8 py-4 overflow-x-auto;
+  }
+
+  .card {
+    @apply flex flex-col gap-3;
+  }
+
+  .card-image {
+    @apply aspect-square h-[176px] w-[176px];
+  }
+
+  .card-image img {
+    @apply rounded-xl object-cover w-full h-full;
+  }
+
+  .card-content h3 {
+    @apply font-normal;
+  }
+
+  .card-content p {
+    @apply text-sm text-text-secondary;
+  }
 }
