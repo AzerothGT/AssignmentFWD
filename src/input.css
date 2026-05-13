@@ -10,14 +10,21 @@
 }
 
 @layer components{
+
+  .navlink{
+    @apply hidden items-center gap-9 sm:flex;
+  }
+ a{
+    @apply transition-all duration-300 hover:text-primary;
+  }
   .btn {
-    @apply min-w-21 w-fit h-10 rounded-full bg-primary px-4 text-sm font-bold;
+    @apply cursor-pointer min-w-21 w-fit h-10 rounded-full bg-primary px-4 text-sm font-bold transition-all duration-300 hover:bg-[oklch(45% 0.24 262)];
   }
   .sub-title {
     @apply text-2xl font-semibold
   }
   .cards {
-    @apply grid grid-cols-[repeat(5,176px)] gap-3 px-8 py-4 overflow-x-auto;
+    @apply grid grid-cols-[repeat(5,182px)] gap-3 px-8 py-4 overflow-x-auto lg:px-0;
   }
 
   .card {
@@ -25,7 +32,7 @@
   }
 
   .card-image {
-    @apply aspect-square h-[176px] w-[176px];
+    @apply aspect-square h-[182px] w-[182px];
   }
 
   .card-image img {
@@ -41,6 +48,6 @@
   }
 
   .social-icon{
-    @apply h-6 w-6 aspect-square;
+    @apply size-6 aspect-square transition-all duration-300 hover:opacity-80 hover:filter-[brightness(0)_saturate(100%)_invert(22%)_sepia(91%)_saturate(5981%)_hue-rotate(234deg)_brightness(89%)_contrast(110%)];
   }
-}
+} 
