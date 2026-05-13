@@ -14,12 +14,12 @@
       <div id="logo-img" class="size-4 bg-white"></div>
       <h2 class="m-0">Dibitech</h2>
     </div>
-    <button class="min-w-21 max-w-120 px-4 bg-primary rounded-full h-10 font-bold text-sm">Login</button>
+    <button class="btn">Login</button>
   </header>
   <main>
     <section id="hero" class="p-8">
       <div id="hero-container"
-        class="relative flex flex-col justify-center overflow-hidden rounded-3xl h-120 w-full gap-1.5 pt-35 px-4">
+        class="relative flex flex-col justify-center overflow-hidden rounded-3xl h-120 w-full gap-1.5 pt-30 px-4">
         <div id="hero-image" class="absolute inset-0 bg-cover bg-center opacity-60"
           style="background-image: url('./assets/images/tower.png');"></div>
         <div id="hero-overlay" class="absolute inset-0 bg-linear-to-r from-black/10 to-black/40"></div>
@@ -96,7 +96,87 @@
         </div>
       </div>
     </section>
+    <section id="featured">
+      <div id="featured-title" class="pt-5 pb-3 px-8">
+        <h2 class="sub-title">Featured Product</h2>
+      </div>
+      <div id="featured-content" class="grid grid-cols-[repeat(2,minmax(176px,410px))] px-8 gap-3 ">
+        <div>
+          <img src="./assets/images/top-ai-tool.png" alt="gambar top ai tool"
+            class="object-cover h-[256px] min-w-[176px] w-full rounded-xl">
+        </div>
+        <div class="flex flex-col card-content gap-3">
+          <h3 class="text-xl font-medium">Top Rated AI Tool</h3>
+          <p>Revolutionize your workflow with this highly-rated AI tool. Experience unparalleled efficiency and
+            innovation.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section id="trending">
+      <div id="trending-title" class="pt-5 pb-3 px-8">
+        <h2 class="sub-title">Trending</h2>
+      </div>
+      <div class="cards grid-cols-[repeat(4,223px)]">
+        <div class="card">
+          <div class="card-image h-[223px] w-[223px]">
+            <img src="./assets/images/ai-write.png" alt="gambar productivity" />
+          </div>
+          <div class="card-content">
+            <h3>AI Writing Assistant</h3>
+            <p>
+              Generate high-quality content effortlessly with this AI writing assistant.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image h-[223px] w-[223px]">
+            <img src="./assets/images/ai-image.png" alt="gambar productivity" />
+          </div>
+          <div class="card-content">
+            <h3>AI Image Generator</h3>
+            <p>
+              Create stunning visuals with the power of AI image generation.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image h-[223px] w-[223px]">
+            <img src="./assets/images/ai-data.png" alt="gambar productivity" />
+          </div>
+          <div class="card-content">
+            <h3>AI Data Analysis Tool</h3>
+            <p>
+              Analyze complex data sets and gain valuable insights with this AI tool.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image h-[223px] w-[223px]">
+            <img src="./assets/images/ai-cs.png" alt="gambar productivity" />
+          </div>
+          <div class="card-content">
+            <h3>AI Customer Support</h3>
+            <p>
+              Enhance your customer service with AI-powered support solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer id="footer" class="grid grid-cols-2 grid-rows-3 text-text-secondary gap-3 px-8 py-6 text-center">
+    <a href="#about-us">About Us</a>
+    <a href="#about-us">Contact</a>
+    <a href="#about-us">Terms of Service</a>
+    <a href="#about-us">Privacy Policy</a>
+    <div id="social-link" class="col-span-2 flex gap-2 justify-center">
+      <img src="./assets/icons/twitter.svg" alt="twitter icon" class="social-icon">
+      <img src="./assets/icons/ig.svg" alt="instagram icon" class="social-icon">
+      <img src="./assets/icons/fb.svg" alt="facebook icon" class="social-icon">
+    </div>
+    <div id="copyright" class="col-span-2">© 2026 DibiTech. All rights reserved.</div>
+  </footer>
 </body>
 
 </html>

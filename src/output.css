@@ -13,11 +13,14 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
@@ -192,33 +195,54 @@
   .z-10 {
     z-index: 10;
   }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-120 {
     height: calc(var(--spacing) * 120);
+  }
+  .h-\[223px\] {
+    height: 223px;
+  }
+  .h-\[256px\] {
+    height: 256px;
+  }
+  .w-\[223px\] {
+    width: 223px;
   }
   .w-full {
     width: 100%;
   }
-  .max-w-120 {
-    max-width: calc(var(--spacing) * 120);
-  }
-  .min-w-21 {
-    min-width: calc(var(--spacing) * 21);
+  .min-w-\[176px\] {
+    min-width: 176px;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-\[repeat\(2\,minmax\(176px\,410px\)\)\] {
+    grid-template-columns: repeat(2,minmax(176px,410px));
+  }
+  .grid-cols-\[repeat\(4\,223px\)\] {
+    grid-template-columns: repeat(4,223px);
+  }
+  .grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -238,14 +262,17 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border-b {
     border-bottom-style: var(--tw-border-style);
@@ -260,9 +287,6 @@
   }
   .bg-background {
     background-color: var(--color-background);
-  }
-  .bg-primary {
-    background-color: var(--color-primary);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -294,6 +318,9 @@
   .bg-center {
     background-position: center;
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
@@ -306,11 +333,14 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
-  .pt-35 {
-    padding-top: calc(var(--spacing) * 35);
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
@@ -325,9 +355,9 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -336,8 +366,15 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .text-balance {
     text-wrap: balance;
+  }
+  .text-text-secondary {
+    color: var(--color-text-secondary);
   }
   .text-white {
     color: var(--color-white);
@@ -347,6 +384,18 @@
   }
 }
 @layer components {
+  .btn {
+    height: calc(var(--spacing) * 10);
+    width: fit-content;
+    min-width: calc(var(--spacing) * 21);
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-primary);
+    padding-inline: calc(var(--spacing) * 4);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .sub-title {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -385,6 +434,11 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
     color: var(--color-text-secondary);
+  }
+  .social-icon {
+    aspect-ratio: 1 / 1;
+    height: calc(var(--spacing) * 6);
+    width: calc(var(--spacing) * 6);
   }
 }
 @property --tw-rotate-x {
